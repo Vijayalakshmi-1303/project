@@ -1,0 +1,24 @@
+def budget_planner():
+    budget=float(input("enter your budget for the month:"))
+    expenses=[]
+    total_expenses=0
+    
+    while True:
+        expense=float(input("enter an expense (-1 to stop):"))
+        if expense== -1:
+            break
+        expenses.append(expense)
+        total_expenses+=expense
+        
+        print("\nBudget Planner")
+        print("===========")
+        print("Budget:$,budget")
+        print("total expenses;$",budget-total_expenses)
+        
+        if total_expenses>budget:
+            print("you have exceed your budget")
+        elif total_expenses==budget:
+            print("you have fully utilized your budget")
+        else:
+            print("you have remaining budget")
+budget_planner()            
